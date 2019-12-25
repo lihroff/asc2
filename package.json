@@ -1,0 +1,42 @@
+{
+  "name": "asc2",
+  "version": "0.0.1",
+  "description": "ASCII table cheatsheet",
+  "repository": "lihroff/asc2",
+  "author": "Tommy Lee",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --cache --fix --ext .js src *test*"
+  },
+  "dependencies": {
+    "meow": "^6.0.0"
+  },
+  "devDependencies": {
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.{js,jsx,ts,tsx,json,less}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "boilerpalte",
+    "template",
+    "starter",
+    "node"
+  ],
+  "engines": {
+    "node": ">=8"
+  }
+}
