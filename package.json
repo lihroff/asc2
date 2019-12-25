@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "ASCII table cheatsheet",
   "repository": "lihroff/asc2",
+  "bin": {
+    "asc2": "cli.js"
+  },
   "author": "Tommy Lee",
   "license": "MIT",
   "scripts": {
@@ -31,10 +34,10 @@
     ]
   },
   "keywords": [
-    "boilerpalte",
-    "template",
-    "starter",
-    "node"
+    "ascii",
+    "ascii-table",
+    "cli",
+    "cheatsheet"
   ],
   "engines": {
     "node": ">=8"
