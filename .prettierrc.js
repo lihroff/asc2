@@ -8,10 +8,10 @@ module.exports = {
   // semi: true,
   singleQuote: true,
   // jsxSingleQuote: false,
-  trailingComma: 'all',
+  trailingComma: 'none',
   bracketSpacing: true,
   // jsxBracketSameLine: false,
-  arrowParens: 'avoid',
+  arrowParens: 'avoid'
   // Don't specify parser to make sure muti-language formatting.
   // parser: "typescript",
 };

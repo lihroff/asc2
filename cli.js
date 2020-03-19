@@ -12,6 +12,7 @@ const cli = meow(
 	Options
     --dec, -d ASCII digital code.
     --char, -c ASCII char code.
+    --string, -s Iterate each character. 
 
 	Examples
 	  $ asc2 -c A
@@ -20,14 +21,18 @@ const cli = meow(
     flags: {
       dec: {
         type: 'string',
-        alias: 'd',
+        alias: 'd'
       },
       char: {
         type: 'string',
-        alias: 'c',
+        alias: 'c'
       },
-    },
-  },
+      string: {
+        type: 'string',
+        alias: 's'
+      }
+    }
+  }
 );
 
 const { flags: opt } = cli;
@@ -35,10 +40,21 @@ const { flags: opt } = cli;
 if (_.isEmpty(opt)) {
   console.table(AsciiTable);
   return;
-} else if (opt.char) {
+}
+
+if (opt.char) {
   console.log(_.find(item => item.Char === opt.char.charAt(), AsciiTable).toString());
   return;
-} else {
+}
+
+if (opt.string) {
+  [...opt.string].forEach(c =>
+    console.log(_.find(item => item.Char === c.charAt(), AsciiTable).toString())
+  );
+  return;
+}
+
+if (opt.dec) {
   const char = AsciiTable[opt.dec];
   if (char) {
     console.log(char.toString());

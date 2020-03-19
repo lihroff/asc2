@@ -4,12 +4,12 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    jest: true,
+    jest: true
   },
   globals: {
-    NODE_ENV: 'readonly',
+    NODE_ENV: 'readonly'
   },
   rules: {
     // 0 - OK, 1 - WARN, 2 - ERROR
-  },
+  }
 };
