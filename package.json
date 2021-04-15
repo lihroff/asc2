@@ -1,6 +1,6 @@
 {
   "name": "asc2",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ASCII table cheatsheet",
   "repository": "lihroff/asc2",
   "bin": {
